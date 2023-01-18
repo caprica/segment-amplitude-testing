@@ -138,3 +138,41 @@ Result:
 ## Conclusion
 
 Test cases 2 and 4 make it through to Amplitude.
+
+## Interaction with Consent Manager
+
+The Consent Manager is an Open Source project separate from Segment Analytics
+that provides an out-of-the-box consent management solution.
+
+It seems that this Consent Manager, when it generates the `integrations`
+object, includes this setting:
+
+```json
+{
+  "integrations": {
+    "all": false
+  }
+}
+```
+
+With this setting, you end up with:
+
+```json
+{
+  "integrations": {
+    "Actions Amplitude": {
+      "session_id": 117846238462
+    },
+    "all": false
+  }
+}
+```
+
+When this reaches Segment's analytics, Segment sees the "all" setting is false.
+
+Ordinarily, explicitly setting true for one of the integrations will override
+the all setting. However, the Amplitude integration does not have a true value,
+it has instead this object value containing the session id.
+
+Consequently, when using Consent Manager, analytics data will *not* be sent to
+Amplitude.
