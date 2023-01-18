@@ -79,7 +79,8 @@ Result:
 analytics.identify(
     'Test 3/4',
     {
-            test: 'Actions Amplitude: false'},
+        test: 'Actions Amplitude: false'
+    },
     {
         integrations: {
             'Actions Amplitude': false,
