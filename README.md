@@ -6,7 +6,7 @@ Some weird stuff happens.
 
 ## Test Scenarios
 
-I neI Four events are sent to Segment, with different `integrations` settings.
+Four events are sent to Segment, with different `integrations` settings.
 
 In the fragments below, it shows a fragment of the raw message received by
 Segment, visible in the sources debugger in the dashboard.
