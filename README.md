@@ -137,4 +137,4 @@ Result:
 
 ## Conclusion
 
-Test case 4 is the only one that made it through to Amplitude.
+Test cases 2 and 4 make it through to Amplitude.
